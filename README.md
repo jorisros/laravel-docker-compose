@@ -18,7 +18,7 @@ docker-compose up -d
 Now you can access the project:
 * [http://localhost:8080](http://localhost:8080)
 * [https://localhost:8443](https://localhost:8443)
-* [Adminer](https://localhost:8306)
+* [Adminer](http://localhost:8306)
 * You can connect directly to the database, to localhost on port 3306
 
 SSL

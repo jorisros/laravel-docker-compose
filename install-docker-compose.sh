@@ -13,11 +13,10 @@ curl --silent https://raw.githubusercontent.com/jorisros/laravel-docker-compose/
 printf "Create the .docker/nginx directory\n"
 mkdir -p .docker/nginx
 
-printf "Download .docker/nginx local certificate\n"
-curl --silent https://raw.githubusercontent.com/jorisros/laravel-docker-compose/master/.docker/nginx/localhost.crt --output .docker/nginx/localhost.crt
-curl --silent https://github.com/jorisros/laravel-docker-compose/blob/master/.docker/nginx/localhost.key --output .docker/nginx/localhost.key
+printf "Generate SSL certificate"
+openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -subj "/C=NL/ST=NH/L=AMSTERDAM/O=JORISROS/CN=localhost" -keyout ./.docker/nginx/localhost.key -out ./.docker/nginx/localhost.crt
 
 printf "Download .docker/nginx/site.conf file\n"
 curl --silent https://raw.githubusercontent.com/jorisros/laravel-docker-compose/master/.docker/nginx/site.conf --output .docker/nginx/site.conf
 
-printf "\n\nNow you can run the docker-compose up -d command\n"
+printf "\n\nNow you can run the `docker-compose up -d` command\n"
