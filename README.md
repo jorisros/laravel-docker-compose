@@ -1,5 +1,6 @@
 
 # Laravel docker compose
+A simple setup with docker-compose for running laravel projects in docker. It does have the minimal requirements for using Laravel.
 
 Usage
 =====
