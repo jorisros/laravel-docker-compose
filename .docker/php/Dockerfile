@@ -1,9 +1,7 @@
 FROM php:7.3-fpm
 
 RUN apt-get update -yqq \
-    && apt-get install -yqq \
-    git
-
+    && apt-get install -yqq git
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
