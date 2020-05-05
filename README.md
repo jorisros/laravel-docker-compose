@@ -6,12 +6,14 @@ Usage
 =====
 Install the laravel code as in the [documentation](https://laravel.com/docs/7.x/installation#installing-laravel).
 ```
-composer create-project --prefer-dist laravel/laravel <name_project>
+git clone https://github.com/laravel/laravel.git <name_project>
 ```
 Then go into the directory <name_project>. And then we want to download the files related ``docker-compose.yml``.
 ```
 curl -sL https://git.io/JfYE1 | bash -s
 ```
+This is a short url to the ``bash`` file in this project that will be executed after downloading, this ``bash`` file contains the download for all the needed docker files.
+
 Now spin off the docker instances by the following commad
 ```
 docker-compose up -d
